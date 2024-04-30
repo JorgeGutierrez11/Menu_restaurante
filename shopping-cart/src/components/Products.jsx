@@ -1,4 +1,4 @@
-import './Products.css'
+import '../styles/Products.css'
 /* import { AddToCartIcon, RemoveFromCartIcon } from './Icons.jsx' */
 import { useCart } from '../Hooks/useCart.js'
 

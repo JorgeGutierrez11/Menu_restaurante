@@ -1,5 +1,5 @@
 import { useCart } from '../Hooks/useCart'
-import './Footer.css'
+import '../styles/Footer.css'
 
 export function Footer() {
   // const { filters } = useFilters()

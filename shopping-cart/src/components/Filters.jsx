@@ -1,5 +1,5 @@
 import { useState, useId } from 'react'
-import './Filters.css'
+import '../styles/Filters.css'
 import { useFilter } from '../Hooks/useFilters.js'
 
 export function Filters({ onChange }) {
