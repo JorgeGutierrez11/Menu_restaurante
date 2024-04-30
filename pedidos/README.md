@@ -1,8 +1,12 @@
-# React + Vite
+-Descargue el repositorio del git hub "https://github.com/JorgeGutierrez11/Menu_restaurante.git"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-Abra una ventana de comandos, ya sea un cmd, un powershell o la ventana de comandos que prefiera
 
-Currently, two official plugins are available:
+-Ubiquese sobre la ruta especificada, deberia terminar en "Menu_restaurante-main\Menu_restaurante-main\pedidos"
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-Una vez allí ubicado, corra los siguientes comandos:
+		1. npm install
+		2. npm run dev
+	uno antes que el otro
+
+-Y ya deberia funcionar el aplicativo web.
