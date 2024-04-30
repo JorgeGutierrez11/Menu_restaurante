@@ -43,7 +43,10 @@
   background: #fff;
 }
 
+button{
+  transition: all .5s ease;
+}
+
 button:hover {
   transform: scale(0.95);
-  transition: all .5s;
 }

@@ -1,5 +1,5 @@
 .Producto{
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   width: 90%;
   height: 20%;
@@ -10,14 +10,19 @@
 }
 
 .Boton{
-  background-color:#800000;
+  width: 12em;
+  background-color:rgba(255, 0, 0, 0.65);
   color:white;
   border: 0px;
   padding: 5px;
   margin:10px;
   border-radius: 4px;
-  text-align: center;
-  
+  text-align: center;  
+  transition: all .3s ease-in-out;
+}
+
+.Boton:hover {
+  transform: scale(1.1);
 }
 
 img{
@@ -28,4 +33,5 @@ img{
 .informacion{
   display: flex;
   align-items: center;
+  font-size: 1.5em;
 }

@@ -8,8 +8,6 @@
     align-items: center;
     width: 100%;
     min-height: 100vh;
-
-
 }
 .contenedor{
     width: 800px;
@@ -22,7 +20,8 @@
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3,auto);
     border-radius: 10px;
-    border: 5px solid gray;
+    border:solid 2px rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .8);
 }
 
 .contenedor > div,
@@ -31,13 +30,12 @@
 .contenedor .pedidos,
 .contenedor .pedidos.producto
 {
-    background-color: #ff0400  ;
+    background-color: rgba(255, 0, 0, 0.65) ;
     padding: 20px;
 
 }
 
 .contenedor .header{
-    background: #ff0400 ;
     color:white;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -46,10 +44,9 @@
 }
 
 .contenedor .pedidos{
-    background-color: white;
-    color: Black;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
     grid-column: span 3;
-    border-color:#808080 ;
 }
 
 .contenedor .sidebar{
@@ -57,9 +54,12 @@
     grid-row: span 2;
     grid-column: span 1;
 }
+.contenedor .header> h2{
+    font-size: 2.3em;
+}
 
 .contenedor .footer{
-    background: #ff0400 ;
+    background: rgba(255, 0, 0, 0.65) ;
     grid-column-start: 1;
     grid-column-end: 4 ;
     border-radius:  0px 0px 5px 5px;
