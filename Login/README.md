@@ -6,7 +6,8 @@
 
 -Una vez allí ubicado, corra los siguientes comandos:
 		1. npm install
-		2. npm run dev
+		2. npm install vite
+		3. npm run dev
 	uno antes que el otro
 
 -Y ya deberia funcionar el aplicativo web.

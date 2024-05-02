@@ -72,9 +72,12 @@ ul {
 
 .content {
   display: flex;
-  height: 570px;
+  height: 100vh;
   padding: 0em 2em;
   background-color: rgba(0, 0, 0, .75);
+
+  overflow: auto;
+  height: 100vh;
 }
 
 .nav {

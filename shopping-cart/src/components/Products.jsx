@@ -32,7 +32,8 @@ export function Products({ products }) {
                                         display: 'flex',
                                         justifyContent: 'center',
                                         alignItems: 'center',
-                                        margin: '4px auto'
+                                        margin: '4px auto',
+                                        color: '#fff'
                                     }}
                                     onClick={() => {
                                         isProductInCart ? removeFromCart(product) : addToCart(product)
