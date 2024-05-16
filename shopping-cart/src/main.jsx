@@ -1,11 +1,11 @@
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+// main:
+import ReactDOM from 'react-dom/client';
+import { FilterProvider } from './Shopping-cart/context/filters.jsx'; // Asegúrate de que la ruta sea correcta
+import App from './App.jsx';
 
-import { FilterProvider } from './context/filters.jsx'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <FilterProvider>
     <App />
-  </FilterProvider>,
-)
+  </FilterProvider>
+);

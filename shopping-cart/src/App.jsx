@@ -1,29 +1,16 @@
-import { products as initialProducts } from './mocks/products.json'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './Login/Login.jsx';
+import Shopping from './Shopping-cart/shopping.jsx';
+import  Panel from './PanelAdmin/Panel.jsx'
 
-// Componentes
-import { Products } from './components/Products.jsx'
-import { Header } from './components/Header.jsx'
-import { Footer } from './components/Footer.jsx'
-import { useFilter } from './Hooks/useFilters.js'
-/* import { Cart } from './components/Cart.jsx' */
-import { CartProvider } from './context/cart.jsx'
-import { Nav } from './components/Nav.jsx'
-
-function App() {
-  const { filterProducts } = useFilter()
-  const filteredProducts = filterProducts(initialProducts)
-
-  return (
-    <CartProvider>
-      <Header />
-      <aside className='content'>
-        <Nav />
-        <Products products={filteredProducts}/>
-      </aside>
-     {/*  <Cart></Cart> */}
-      {/* <Footer></Footer> */}
-    </CartProvider>
-  )
+export default function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Shopping/>}/>
+                <Route path="/login" element={<Login />} />
+                <Route path="/panel-administracion" element={<Panel />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
-
-export default App
