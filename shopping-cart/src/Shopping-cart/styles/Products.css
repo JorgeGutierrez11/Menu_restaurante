@@ -8,11 +8,8 @@
 
 .products ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit,
-      minmax(200px,
-        1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
- 
 }
 
 .products li {
@@ -20,9 +17,9 @@
   flex-direction: column;
   max-width: 700px;
   margin: .5rem;
-  
+
   border-radius: 4px;
-  box-shadow: 0 0 10px 10px rgba(200 , 200, 200, 0.2);
+  box-shadow: 0 0 10px 10px rgba(200, 200, 200, 0.2);
   background-color: rgba(0, 0, 0, .25);
 }
 
@@ -44,10 +41,16 @@
   background: #fff;
 }
 
-button{
+button {
   transition: all .5s ease;
 }
 
 button:hover {
   transform: scale(0.95);
+}
+
+@media screen and (width <=600px) {
+  .products {
+    padding: 0px;
+  }
 }

@@ -11,20 +11,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  
+
   ::-webkit-scrollbar {
     width: 10px;
     display: none;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: #f1f1f1;
   }
-  
+
   ::-webkit-scrollbar-thumb {
-    background: rgba(6, 6, 6, .1);   
+    background: rgba(6, 6, 6, .1);
   }
-  
+
 }
 
 #root {
@@ -79,6 +79,7 @@ ul {
   display: flex;
   height: 100vh;
   padding: 0em 2em;
+  
   background-color: rgba(0, 0, 0, .68);
   backdrop-filter: blur(5px);
 }
@@ -87,4 +88,19 @@ ul {
   width: 30%;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (width <= 600px) {
+  .content{
+    display: block;
+    overflow-y: scroll;
+  }
+
+  .nav{
+    width: 100%;
+  }
+
+  .scroll-container{
+    scroll-snap-type:none;
+  }
 }

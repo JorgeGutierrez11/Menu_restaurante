@@ -1,17 +1,15 @@
 import "../Styles/PanelAdmin.css"
 import React, { useState } from 'react';
 import ListadoProductos from "./ListadoProductos";
-import {CloseLoginIcon} from "./Icons"
+import { CloseLoginIcon } from "./Icons"
 import { Link } from 'react-router-dom';
 export function PanelAdmin() {
-
-
     return (
         <div className="fondo">
             <Link to="/">
                 <label className="login-button Btn">
                     <span className="IconContainer ">
-                        <CloseLoginIcon/>
+                        <CloseLoginIcon />
                     </span>
                     <p className="text">Sing out</p>
                 </label>

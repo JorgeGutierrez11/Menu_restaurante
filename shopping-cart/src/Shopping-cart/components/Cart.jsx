@@ -1,6 +1,6 @@
 import '../styles/Cart.css'
 
-import { useId } from "react";
+import { useId, useState } from "react";
 import { Link } from 'react-router-dom';
 import { CartIcon, ClearCartIcon, LoginIcon } from "./Icons";
 import { useCart } from "../Hooks/useCart.js";
@@ -8,6 +8,12 @@ import { useCart } from "../Hooks/useCart.js";
 export function Cart() {
     const cartCheckboxId = useId()
     const { cart, clearCart, addToCart } = useCart()
+
+    const [cartCopy, setCartCopy] = useState([]);
+    const handleCopyCart = () => {
+        setCartCopy([...cart]);
+        localStorage.setItem('cartCopy', JSON.stringify(cartCopy)); // Almacenar cartCopy en el almacenamiento local
+    };
 
     function CartItem({ thumbnail, price, title, quantity, addToCart }) {
         return (
@@ -56,10 +62,16 @@ export function Cart() {
                         />
                     ))}
                 </ul>
-                <button onClick={clearCart} className='btnClearCart'>
-                    <ClearCartIcon />
-                </button>
+                <div className='btnCartStyle'>
+                    <button onClick={handleCopyCart} className='btnClearCart'>
+                        <div>Completar compra</div>
+                    </button>
+                    <button onClick={clearCart} className='btnClearCart'>
+                        <ClearCartIcon />
+                    </button>
+                </div>
             </aside>
         </>
     )
+
 }

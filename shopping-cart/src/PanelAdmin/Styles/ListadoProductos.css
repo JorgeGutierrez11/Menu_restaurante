@@ -9,6 +9,18 @@
   column-gap: 10 px;
 }
 
+.Producto img {
+  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  object-fit: cover;
+}
+
+.Producto div{
+  text-align: center;
+  margin: auto;
+}
 .Boton{
   width: 12em;
   background-color:#FF0400;

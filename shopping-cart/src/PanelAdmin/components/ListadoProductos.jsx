@@ -1,45 +1,49 @@
-import React, { useState } from 'react';
- import '../Styles/ListadoProductos.css' 
+import React, { useState, useEffect } from 'react';
+import '../Styles/ListadoProductos.css';
+
 const ListadoProductos = () => {
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState([]); 
 
-  const LimpiarProductos = () =>{
-      setProductos([]);
-    };
+  // Fetch cart data from localStorage on component mount
+  useEffect(() => {
+    const products = JSON.parse(localStorage.getItem('cartCopy'));
+    if (products) {
+      setProductos(products);
+    }
+  }, []);
 
-  const AgregarProdcuto = () => {
-    const nuevoProducto = {
-      imagen: 'postre.jpg',
-      precio: 12000,
-      descripcion: 'Cheesecake de mora',
-      cantidad:2
-    };
-    setProductos([...productos, nuevoProducto]);
+  const LimpiarProductos = () => {
+    setProductos([]);
+    localStorage.removeItem('cartCopy');
   };
 
-  return (
-    <div >
-      <button className="Boton" onClick={AgregarProdcuto}> <h4>Agregar Producto</h4></button>
-      {productos.map((producto, index) => (
-        <div key={index}className="Producto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFIO6v7FjgvdCqGq6wRqAP4Nnl35ebJyb3Ywf6E2H0oA&s" alt="Producto" />
-            <div className="informacion">
-              <div>
-                <p>{producto.descripcion}</p>
-                <p>${producto.precio}</p>
-            
-                <p>x{producto.cantidad}</p>
-              </div>
-            
-            </div>
-            
+  function Item({ thumbnail, price, title, quantity }) {
+    return (
+      <li key={title} className='Producto'> 
+        <img src={thumbnail} alt={title} />
+        <div>
+          <strong>{title}</strong> - ${price} <br/>
+          <strong>Cantidad {quantity}</strong>
         </div>
-        
-      ))}
-      <button className="Boton"onClick={LimpiarProductos}><h4> Completar Orden </h4></button>
+      </li>
+    );
+  }
+
+  return (
+    <div>
+      <ul>
+        {productos.map((product) => (
+          <Item
+            key={product.id || title} 
+            {...product} 
+          />
+        ))}
+      </ul>
+      <button className="Boton" onClick={LimpiarProductos}>
+        <h4>Completar Orden</h4>
+      </button>
     </div>
   );
 };
 
-
-export default ListadoProductos
+export default ListadoProductos;

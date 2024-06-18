@@ -11,9 +11,13 @@
   background: #000;
   }
 
+  .btnCartStyle{
+    display: flex;
+  }
+
   .btnClearCart{
     border: solid thin #fff;
-    margin: 0 5em; 
+    margin: 2px;
   }
   
   .cart img {

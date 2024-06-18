@@ -43,10 +43,28 @@
     box-shadow: 6px 6px 12px rgba(255, 255, 255, .5), -6px -6px 12px rgba(255, 255, 255, .5);
     margin: .8em;
     height: 40px;
-  }
-  
-  .button_filter:active {
+}
+
+.button_filter:active {
     color: #666;
     box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+@media screen and (width <= 600px) {
+    .button-category {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .button_filter {
+        margin: .1em;
+        height: 30px;
+        padding: 0 5px;
+        font-size: 1em;
+        box-shadow: none;
+        min-width: 80px;
+    }
   }
-  
